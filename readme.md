@@ -14,4 +14,16 @@ First test consists of calling the not-existing yet generic endpoint and just ge
 
 [X] Write the test and expect a 200 -> expected to fail
 
-[ ] Implement the first endpoint to return a 200
+[X] Implement the first endpoint to return a 200
+
+#### TDD 2
+
+Now we'll have to implement getting a quote from the endpoint we created
+
+[ ] Write the test and check the returned quote came from the YAML file
+
+[ ] Alter the first endpoint so it returns a quote (and status should still be 200)
+
+#### TDD 3
+
+TBC
