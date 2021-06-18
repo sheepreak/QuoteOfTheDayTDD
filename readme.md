@@ -37,10 +37,11 @@ Usage of SecureRandom allows more efficient way of returning different quotes, a
 #### TDD 4
 
 Now that our endpoint returns a random quote, add the parameter that will allow a search
+I'll add two tests here so that I can test both cases, one with the parameter existing, the other returning a 404
 
-[ ] Write the test that will call our endpoint with a query parameter and returns a quote from the library containing our parameter
+[X] Write the test that will call our endpoint with a query parameter and returns a quote from the library containing our parameter
 
-[ ] Write another test that returns a 404 if no quote contains the given parameter
+[X] Write another test that returns a 404 if no quote contains the given parameter
 
 [ ] Alter the endpoint to allow this parameter
 

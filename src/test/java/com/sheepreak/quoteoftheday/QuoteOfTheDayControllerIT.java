@@ -49,4 +49,21 @@ class QuoteOfTheDayControllerIT {
         Assertions.assertNotEquals(response1, response2);
     }
 
+    @DisplayName("Endpoint should return a 404 error when giving a paramter that doesn't exist")
+    @Test
+    @SneakyThrows
+    void should_return_not_found_with_unknown_parameter() {
+        mockMvc.perform(get("/quoteOfTheDay").param("q", "ruigbrigrieg")).andExpect(status().isNotFound());
+    }
+
+    @DisplayName("Endpoint with correct parameter returns a quote containing that parameter")
+    @Test
+    @SneakyThrows
+    void should_return_quote_with_given_parameter() {
+        String parameter = "sloubi";
+
+        String response = mockMvc.perform(get("/quoteOfTheDay").param("q", parameter)).andReturn().getResponse().getContentAsString();
+
+        Assertions.assertTrue(response.contains(parameter));
+    }
 }
