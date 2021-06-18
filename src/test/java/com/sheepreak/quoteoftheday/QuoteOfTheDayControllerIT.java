@@ -83,4 +83,20 @@ class QuoteOfTheDayControllerIT {
 
     mockMvc.perform(get("/quoteOfTheDay").param("q", parameter)).andExpect(status().isBadRequest());
   }
+
+  @DisplayName("Endpoint with correct parameter with blank spaces returns a quote containing that parameter without the blank spaces")
+  @Test
+  @SneakyThrows
+  void should_return_quote_with_given_parameter_with_blank_spaces() {
+    String parameter = "      chante Sloubi      ";
+
+    String response =
+            mockMvc
+                    .perform(get("/quoteOfTheDay").param("q", parameter))
+                    .andReturn()
+                    .getResponse()
+                    .getContentAsString();
+
+    Assertions.assertTrue(response.contains(parameter.trim()));
+  }
 }
