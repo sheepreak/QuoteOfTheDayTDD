@@ -43,7 +43,7 @@ I'll add two tests here so that I can test both cases, one with the parameter ex
 
 [X] Write another test that returns a 404 if no quote contains the given parameter
 
-[ ] Alter the endpoint to allow this parameter
+[X] Alter the endpoint to allow this parameter
 
 #### TDD 5 
 
