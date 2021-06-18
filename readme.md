@@ -26,13 +26,13 @@ Now we'll have to implement getting a quote from the endpoint we created
 
 #### TDD 3 
 
-/!\ Test pas cohérent car si l'endpoint renvoie successivement 2 fois la même quote le test va fail, mais laissé ici pour justifier l'ajout du random
-
 Next step is implementing the fact that the quote returned by two successive calls will never be systematically the same
 
 [X] Write the test that makes 2 successive calls and checks that the content differs
 
-[ ] Alter the endpoint and add a randomizer
+[X] Alter the endpoint and add a randomizer
+
+Usage of SecureRandom allows more efficient way of returning different quotes, although it can happen so this test might have to be pruned. But it allows the implementation of the randomizer so I'll keep it there.
 
 #### TDD 4
 
