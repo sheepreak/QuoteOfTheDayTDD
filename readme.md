@@ -51,7 +51,7 @@ An issue with our previous addition is that it should only work when the paramet
 
 [X] Write the test that will call our endpoint with a bad parameter and shall return a 400 error
 
-[ ] Implement this mechanic
+[X] Implement this mechanic
 
 #### Bonus TDD6
 
