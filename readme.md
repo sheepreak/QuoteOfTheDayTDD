@@ -59,4 +59,4 @@ When a parameter has blank spaces, shall act as if there weren't any and give th
 
 [X] Write the test that calls our endpoint with a correct parameter that contains unfortunate blanks
 
-[ ] Handle this mechanic
+[X] Handle this mechanic

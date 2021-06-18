@@ -21,7 +21,7 @@ public class QuoteService {
   public String getRandomQuoteFromLibrary(String q) {
     if (q != null) {
       return quoteLibrary.getQuotes().stream()
-          .filter(quote -> quote.contains(q))
+          .filter(quote -> quote.contains(q.trim()))
           .findAny()
           .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     } else {
