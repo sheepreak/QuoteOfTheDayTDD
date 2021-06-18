@@ -20,7 +20,7 @@ First test consists of calling the not-existing yet generic endpoint and just ge
 
 Now we'll have to implement getting a quote from the endpoint we created
 
-[ ] Write the test and check the returned quote came from the YAML file
+[X] Write the test and check the returned quote came from the YAML file
 
 [ ] Alter the first endpoint so it returns a quote (and status should still be 200)
 

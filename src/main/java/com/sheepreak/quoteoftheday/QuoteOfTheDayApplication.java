@@ -1,5 +1,6 @@
 package com.sheepreak.quoteoftheday;
 
+import lombok.Getter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,5 +10,4 @@ public class QuoteOfTheDayApplication {
     public static void main(String[] args) {
         SpringApplication.run(QuoteOfTheDayApplication.class, args);
     }
-
 }
