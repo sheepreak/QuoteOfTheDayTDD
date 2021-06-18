@@ -49,6 +49,14 @@ I'll add two tests here so that I can test both cases, one with the parameter ex
 
 An issue with our previous addition is that it should only work when the parameter is a single word (no special characters or spaces)
 
-[ ] Write the test that will call our endpoint with a bad parameter and shall return a 400 error
+[X] Write the test that will call our endpoint with a bad parameter and shall return a 400 error
 
 [ ] Implement this mechanic
+
+#### Bonus TDD6
+
+When a parameter has blank spaces, shall act as if there weren't any and give the quote that matches with the spaceless parameter equivalent
+
+[ ] Write the test that calls our endpoint with a correct parameter that contains unfortunate blanks
+
+[ ] Handle this mechanic

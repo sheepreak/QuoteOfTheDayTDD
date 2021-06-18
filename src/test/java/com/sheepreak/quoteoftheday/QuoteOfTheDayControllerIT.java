@@ -74,4 +74,13 @@ class QuoteOfTheDayControllerIT {
 
     Assertions.assertTrue(response.contains(parameter));
   }
+
+  @DisplayName("Endpoint with incorrect parameter returns a 400 error")
+  @Test
+  @SneakyThrows
+  void should_return_bad_request_error() {
+    String parameter = "$^^^é&###@";
+
+    mockMvc.perform(get("/quoteOfTheDay").param("q", parameter)).andExpect(status().isBadRequest());
+  }
 }
