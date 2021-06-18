@@ -39,4 +39,14 @@ class QuoteOfTheDayControllerIT {
         Assertions.assertTrue(quoteLibrary.getQuotes().contains(response));
     }
 
+    @DisplayName("Endpoint should not return same quote with two successive calls")
+    @Test
+    @SneakyThrows
+    void should_return_two_different_quotes_with_two_calls() {
+        String response1 = mockMvc.perform(get("/quoteOfTheDay")).andReturn().getResponse().getContentAsString();
+        String response2 = mockMvc.perform(get("/quoteOfTheDay")).andReturn().getResponse().getContentAsString();
+
+        Assertions.assertNotEquals(response1, response2);
+    }
+
 }

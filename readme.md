@@ -24,11 +24,13 @@ Now we'll have to implement getting a quote from the endpoint we created
 
 [X] Alter the first endpoint so it returns a quote (and status should still be 200)
 
-#### TDD 3
+#### TDD 3 
+
+/!\ Test pas cohérent car si l'endpoint renvoie successivement 2 fois la même quote le test va fail, mais laissé ici pour justifier l'ajout du random
 
 Next step is implementing the fact that the quote returned by two successive calls will never be systematically the same
 
-[ ] Write the test that makes 2 successive calls and checks that the content differs
+[X] Write the test that makes 2 successive calls and checks that the content differs
 
 [ ] Alter the endpoint and add a randomizer
 
