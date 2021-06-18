@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class QuoteController {
 
-    private final QuoteService quoteService;
+  private final QuoteService quoteService;
 
-    @GetMapping
-    public String getQuoteOfTheDay(@RequestParam(required = false) String q) {
-        return quoteService.getRandomQuoteFromLibrary(q);
-    }
+  @GetMapping
+  public String getQuoteOfTheDay(@RequestParam(required = false) String q) {
+    return quoteService.getRandomQuoteFromLibrary(q);
+  }
 }

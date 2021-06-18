@@ -13,5 +13,5 @@ import java.util.List;
 @AllArgsConstructor
 public class QuoteLibrary {
 
-    private List<String> quotes;
+  private List<String> quotes;
 }
