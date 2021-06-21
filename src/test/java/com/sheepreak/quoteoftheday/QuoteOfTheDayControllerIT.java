@@ -99,4 +99,20 @@ class QuoteOfTheDayControllerIT {
 
     Assertions.assertTrue(response.contains(parameter.trim()));
   }
+
+  @DisplayName("Endpoint with correct parameter with capital letters will return a quote ignoring case")
+  @Test
+  @SneakyThrows
+  void should_return_quote_ignoring_case() {
+    String parameter = "chante sloubi";
+
+    String response =
+            mockMvc
+                    .perform(get("/quoteOfTheDay").param("q", parameter))
+                    .andReturn()
+                    .getResponse()
+                    .getContentAsString();
+
+    Assertions.assertTrue(response.contains("chante Sloubi"));
+  }
 }

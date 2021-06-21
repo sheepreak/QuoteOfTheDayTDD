@@ -60,3 +60,11 @@ When a parameter has blank spaces, shall act as if there weren't any and give th
 [X] Write the test that calls our endpoint with a correct parameter that contains unfortunate blanks
 
 [X] Handle this mechanic
+
+#### Bonus TDD7
+
+When a parameter is given, will return a quote regardless of the case
+
+[X] Write a test that calls the API and will return a quote although the parameter doesn't have the same capital letters as the quote
+
+[ ] Handle this
