@@ -4,6 +4,7 @@ import com.sheepreak.quoteoftheday.config.QuoteLibrary;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.security.SecureRandom;
@@ -21,7 +22,7 @@ public class QuoteService {
   public String getRandomQuoteFromLibrary(String q) {
     if (q != null) {
       return quoteLibrary.getQuotes().stream()
-          .filter(quote -> quote.contains(q))
+          .filter(quote -> quote.toLowerCase().contains(q.toLowerCase()))
           .findAny()
           .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     } else {

@@ -72,7 +72,7 @@ class QuoteOfTheDayControllerIT {
             .getResponse()
             .getContentAsString();
 
-    Assertions.assertTrue(response.contains(parameter));
+    Assertions.assertTrue(response.toLowerCase().contains(parameter.toLowerCase()));
   }
 
   @DisplayName("Endpoint with incorrect parameter returns a 400 error")

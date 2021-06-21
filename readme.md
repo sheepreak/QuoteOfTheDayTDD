@@ -67,4 +67,4 @@ When a parameter is given, will return a quote regardless of the case
 
 [X] Write a test that calls the API and will return a quote although the parameter doesn't have the same capital letters as the quote
 
-[ ] Handle this
+[X] Handle this
