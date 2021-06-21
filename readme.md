@@ -5,6 +5,7 @@
 
 - Spring boot for familiarity and JUnit
 - MockMVC for integration tests so tests can be launched independently from the implementation and can allow end to end API tests (full request -> response processing)
+- Could have skipped Lombok and made a constructor and getter myself, maybe should have.
 -----
 ## Steps
 
